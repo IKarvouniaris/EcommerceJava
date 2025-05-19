@@ -18,6 +18,7 @@ public class Main {
                   5) Crear un pedido
                   6) Listar pedidos
                   7) Salir
+                  8) hola
                 
                 Elija una opción:
                 """);
