@@ -88,6 +88,9 @@ public class Main {
                 }
             }
 
+            Producto nuevoProducto = new Producto(nombre, descripcion ,precio, stock);
+            productos.add(nuevoProducto);
+
             System.out.println("Producto agregado:");
             System.out.println("Nombre: " + nombre);
             System.out.println("Descripción: " + descripcion);
