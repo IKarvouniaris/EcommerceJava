@@ -18,7 +18,6 @@ public class Main {
                   5) Crear un pedido
                   6) Listar pedidos
                   7) Salir
-                  8) hola
                 
                 Elija una opción:
                 """);
@@ -32,7 +31,10 @@ public class Main {
                 } else if (opcion >= 1 && opcion <= 6) {
                     System.out.println("Elegiste la opción: " + opcion);
                     if (opcion == 1) {
-                        agregarproducto();
+                        agregarproducto(productos);
+                    }
+                    if (opcion == 2) {
+                        listarproductos(productos);
                     }
                 } else {
                     System.out.println("Entrada inválida. Por favor, ingrese un número válido.");
@@ -42,8 +44,9 @@ public class Main {
                 entrada.nextLine();
             }
         }
+        entrada.close();
     }
-    public static void agregarproducto () {
+    public static void agregarproducto (ArrayList<Producto> productos) {
         Scanner entrada = new Scanner(System.in);
         double precio = 0.0;
         boolean precioValido = false, stockValido = false;
@@ -92,10 +95,7 @@ public class Main {
             productos.add(nuevoProducto);
 
             System.out.println("Producto agregado:");
-            System.out.println("Nombre: " + nombre);
-            System.out.println("Descripción: " + descripcion);
-            System.out.println("Precio: " + precio);
-            System.out.println("Stock: " + stock);
+            nuevoProducto.mostrarInfo();
 
             System.out.println("Desea cargar otro producto? Presione 1.");
             if (entrada.hasNextInt()) {
@@ -114,7 +114,7 @@ public class Main {
         }
     }
 
-    public static void listarproductos() {
+    public static void listarproductos(ArrayList<Producto> productos) {
         Scanner entrada = new Scanner(System.in);
         System.out.println("Los productos que tenemos listados son:");
         for (Producto producto : productos) {
@@ -125,5 +125,4 @@ public class Main {
 
 
     }
-    //entrada.close();
 }
