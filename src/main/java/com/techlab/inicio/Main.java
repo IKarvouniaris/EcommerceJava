@@ -113,6 +113,13 @@ public class Main {
 
     public static void listarproductos() {
         Scanner entrada = new Scanner(System.in);
+        System.out.println("Los productos que tenemos listados son:");
+        for (Producto producto : productos) {
+            producto.mostrarInfo();
+            System.out.println("Presione cualquier tecla para continuar.");
+            entrada.next();
+        }
+
 
     }
     //entrada.close();
