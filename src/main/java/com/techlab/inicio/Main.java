@@ -110,5 +110,10 @@ public class Main {
 
         }
     }
+
+    public static void listarproductos() {
+        Scanner entrada = new Scanner(System.in);
+
+    }
     //entrada.close();
 }
